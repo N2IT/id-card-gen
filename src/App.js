@@ -18,7 +18,7 @@ function App() {
       </header>
       <Container>
         <Row>
-          <Col md="6">
+          <Col className="framed" md="6">
             <h1 className="text-center p-5">Input Form</h1>
             <form>
               <p>Enter Name <span><input type='text'></input></span></p>
@@ -27,15 +27,15 @@ function App() {
               <Button as="input" type="submit" value="Submit" />{' '}
             </form>
           </Col>
-          <Col md="6">
+          <Col className="framed" md="6">
             <h1 className="text-center p-5">Generated Card</h1>
-            <div className="bg-box">
-              <Container>
+            <div className="bg-box p-3">
+              <Container className="styled">
                 <Row>
-                  <Col md="4">
+                  <Col className="p-3" md="4">
                     <img src="" alt="Placeholder Image"></img>
                   </Col>
-                  <Col md="8">
+                  <Col className="inner-bg p-3" md="8">
                     <p>Name: Tony Eder</p>
                     <p>School: Flatrion School for Software Engineering</p>
                     <p>Location: Remote / Online</p>

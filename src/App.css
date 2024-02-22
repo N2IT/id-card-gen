@@ -35,3 +35,21 @@
     transform: rotate(360deg);
   }
 } */
+
+.framed {
+  border: 3px solid #666;
+}
+
+.bg-box {
+  background-color: yellow;
+  border-radius: 5px;
+}
+
+.inner-bg {
+  background-color: white;
+}
+
+.styled {
+  box-shadow: 3px 3px 3px 3px #000;
+  border-radius: 5px;
+}
