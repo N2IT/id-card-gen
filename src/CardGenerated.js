@@ -1,13 +1,18 @@
 import Col from 'react-bootstrap/Col';
 
-const CardGenerated = () => {
+const CardGenerated = ({ imageUrl, name, school, location }) => {
 
     return (
-        <Col className="inner-bg p-3" md="8">
-            <p>Name: </p>
-            <p>School: Flatrion School for Software Engineering</p>
-            <p>Location: Remote / Online</p>
-        </Col>
+        <>
+            <Col className="p-3" md="4">
+                <img src={imageUrl} alt="Card Avatar" style={{maxWidth:"165px"}}></img>
+            </Col>
+            <Col className="inner-bg p-3" md="8">
+                <p>Name: {name}</p>
+                <p>School: {school}</p>
+                <p>Location: {location}</p>
+            </Col>
+        </>
     )
 }
 
