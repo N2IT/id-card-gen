@@ -23,6 +23,14 @@ function App() {
     console.log(name)
   }
 
+  const resetForm = () => {
+    setSchool("")
+    setLocation("")
+    setImageUrl("")
+    setName("")
+    setAsVisible(false)
+  }
+
   return (
     <div className="">
       <header className="App-header">
@@ -36,10 +44,10 @@ function App() {
           <Col className="framed" md="6">
             <h1 className="text-center p-5">Input Form</h1>
             <form id='form' onSubmit={handleSubmit}>
-              <p>Avatar Image: <span><input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} title="avatar" id="avatar" type="text"></input></span></p>
-              <p>Enter Name: <span><input value={name} onChange={(e) => setName(e.target.value)} title='name' id='name' type='text'></input></span></p>
-              <p>Enter College Name: <span><input value={school} onChange={(e) => setSchool(e.target.value)} title='school' id='school' type='text'></input></span></p>
-              <p>Enter Location: <span><input value={location} onChange={(e) => setLocation(e.target.value)} title='location' id='location' type='text'></input></span></p>
+              <p>Avatar Image: <span><input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} title="avatar" id="avatar" type="text" required></input></span></p>
+              <p>Enter Name: <span><input value={name} onChange={(e) => setName(e.target.value)} title='name' id='name' type='text' required></input></span></p>
+              <p>Enter College Name: <span><input value={school} onChange={(e) => setSchool(e.target.value)} title='school' id='school' type='text' required></input></span></p>
+              <p>Enter Location: <span><input value={location} onChange={(e) => setLocation(e.target.value)} title='location' id='location' type='text'required></input></span></p>
               <Button as="input" type="submit" value="Submit" />{' '}
             </form>
           </Col>
@@ -48,7 +56,7 @@ function App() {
             <div className="bg-box p-3">
               <Container className="styled">
                 <Row>
-                  {isVisible ? <CardGenerated name={name} school={school} location={location} imageUrl={imageUrl} /> : "LOADING..."}
+                  {isVisible ? <CardGenerated name={name} school={school} location={location} imageUrl={imageUrl} resetForm={resetForm} /> : "LOADING..."}
                 </Row>
               </Container>
             </div>

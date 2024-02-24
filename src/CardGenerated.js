@@ -1,6 +1,7 @@
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
-const CardGenerated = ({ imageUrl, name, school, location }) => {
+const CardGenerated = ({ imageUrl, name, school, location, resetForm }) => {
 
     return (
         <>
@@ -12,6 +13,8 @@ const CardGenerated = ({ imageUrl, name, school, location }) => {
                 <p>School: {school}</p>
                 <p>Location: {location}</p>
             </Col>
+            <Button onClick={resetForm} type="submit" value="Submit">Reset Form</Button>
+
         </>
     )
 }
