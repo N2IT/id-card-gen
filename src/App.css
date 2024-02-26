@@ -38,18 +38,38 @@
 
 .framed {
   border: 3px solid #666;
+  padding-bottom: 3rem;
 }
 
 .bg-box {
-  background-color: yellow;
+  background-color: #85BAA1;
   border-radius: 5px;
+  box-shadow: 0 0 5px #85BAA1,
+  0 0 25px #85BAA1,
+  0 0 50px #85BAA1,
+  0 0 100px #85BAA1;
 }
 
 .inner-bg {
   background-color: white;
+  border-radius: 5px;
 }
 
 .styled {
-  box-shadow: 3px 3px 3px 3px #000;
+  box-shadow: 5px 5px 10px 0px #0000007d;
   border-radius: 5px;
+}
+
+.react-swiftreveal .row>* {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+input {
+  width: -webkit-fill-available;
+}
+
+form {
+  display: grid;
+  justify-content: stetch;
 }

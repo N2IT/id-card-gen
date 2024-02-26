@@ -1,25 +1,27 @@
 import { useState } from 'react'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardGenerated from './CardGenerated';
+import Loading from './Loading'
+import Row from 'react-bootstrap/Row'
+
 
 
 function App() {
-  const [ name, setName ] = useState("")
-  const [ school, setSchool ] = useState("")
-  const [ location, setLocation ] =useState("")
-  const [ imageUrl, setImageUrl ] = useState("")
-  const [ isVisible, setAsVisible ] = useState(false)
+  const [name, setName] = useState("")
+  const [school, setSchool] = useState("")
+  const [location, setLocation] = useState("")
+  const [imageUrl, setImageUrl] = useState("")
+  const [isVisible, setAsVisible] = useState(false)
   // let cardName = setName ? name : null
 
   const handleSubmit = (e) => {
-      e.preventDefault()
-      setAsVisible(!isVisible)
+    e.preventDefault()
+    setAsVisible(!isVisible)
     console.log(name)
   }
 
@@ -47,7 +49,7 @@ function App() {
               <p>Avatar Image: <span><input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} title="avatar" id="avatar" type="text" required></input></span></p>
               <p>Enter Name: <span><input value={name} onChange={(e) => setName(e.target.value)} title='name' id='name' type='text' required></input></span></p>
               <p>Enter College Name: <span><input value={school} onChange={(e) => setSchool(e.target.value)} title='school' id='school' type='text' required></input></span></p>
-              <p>Enter Location: <span><input value={location} onChange={(e) => setLocation(e.target.value)} title='location' id='location' type='text'required></input></span></p>
+              <p>Enter Location: <span><input value={location} onChange={(e) => setLocation(e.target.value)} title='location' id='location' type='text' required></input></span></p>
               <Button as="input" type="submit" value="Submit" />{' '}
             </form>
           </Col>
@@ -55,9 +57,7 @@ function App() {
             <h1 className="text-center p-5">Generated Card</h1>
             <div className="bg-box p-3">
               <Container className="styled">
-                <Row>
-                  {isVisible ? <CardGenerated name={name} school={school} location={location} imageUrl={imageUrl} resetForm={resetForm} /> : "LOADING..."}
-                </Row>
+                {isVisible ? <CardGenerated name={name} school={school} location={location} imageUrl={imageUrl} resetForm={resetForm} /> : <Loading />}
               </Container>
             </div>
           </Col>
