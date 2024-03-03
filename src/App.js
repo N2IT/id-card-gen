@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardGenerated from './CardGenerated';
 import Loading from './Loading'
 import Row from 'react-bootstrap/Row'
+import Catalog from './Catalog'
 
 
 
@@ -61,6 +62,9 @@ function App() {
               </Container>
             </div>
           </Col>
+        </Row>
+        <Row>
+          <Catalog />
         </Row>
       </Container>
     </div>

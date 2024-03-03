@@ -42,12 +42,8 @@
 }
 
 .bg-box {
-  background-color: #85BAA1;
+  background-color: #282c34;
   border-radius: 5px;
-  box-shadow: 0 0 5px #85BAA1,
-  0 0 25px #85BAA1,
-  0 0 50px #85BAA1,
-  0 0 100px #85BAA1;
 }
 
 .inner-bg {
@@ -56,7 +52,6 @@
 }
 
 .styled {
-  box-shadow: 5px 5px 10px 0px #0000007d;
   border-radius: 5px;
 }
 
@@ -72,4 +67,19 @@ input {
 form {
   display: grid;
   justify-content: stetch;
+}
+
+.loading-style {
+  color: #C64191;
+  text-shadow: 0 0 5px #C64191, 0 0 25px #C64191, 0 0 50px #C64191, 0 0 100px #C64191;
+}
+
+.text-box {
+  border: 1px solid;
+  background: blue;
+  max-width: 165px;
+  border-radius: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100px;
 }

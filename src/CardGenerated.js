@@ -10,7 +10,7 @@ const CardGenerated = ({ imageUrl, name, school, location, resetForm }) => {
             <Fade delay={500} timeout={1500}>
                 <Row>
                     <Col className="" md="4">
-                        <img src={imageUrl} alt="Card Avatar" style={{ maxWidth: "165px" }}></img>
+                        <img src={imageUrl} alt="Card Avatar" style={{ maxWidth: "165px", borderRadius: "5px" }}></img>
                     </Col>
                     <Col className="inner-bg p-3" md="8">
                         <p>Name: {name}</p>
